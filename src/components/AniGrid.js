@@ -1,6 +1,7 @@
 import React from 'react'
 import AniChartRequest from '../requests/AniChartRequest'
 import seasonalAnimeQuery from '../queries/PostSpringSeason'
+import AniCard from './AniCard'
 import {Row, Col} from 'react-bootstrap'
 class AniGrid extends React.Component {
     state = {
@@ -29,13 +30,17 @@ class AniGrid extends React.Component {
     render() {
         return (
             <div>
-                {
-                    this.state.currentSeasonAnimeList.map((anime) => {
-                        return (
-                            <h6>{anime.title.english}</h6>
-                        )
-                    })
-                }
+                <Row>
+                    {
+                        this.state.currentSeasonAnimeList.map((anime) => {
+                            return (
+                                <Col lg={4}>
+                                    <AniCard animeDetails={anime}/>
+                                </Col>
+                            )
+                        })
+                    }
+                </Row>
             </div>
         )
     }

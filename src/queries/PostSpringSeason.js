@@ -8,6 +8,7 @@ const seasonalAnimeSearch = `query ($format: MediaFormat, $season: MediaSeason, 
               english
               native
           }
+          description
           startDate {
               year
               month
