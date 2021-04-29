@@ -24,6 +24,7 @@ const seasonalAnimeSearch = `query ($format: MediaFormat, $season: MediaSeason, 
           isAdult
           genres
           coverImage {
+              medium
               large
           }
           bannerImage
